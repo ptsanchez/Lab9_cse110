@@ -89,7 +89,7 @@
 
   <script>
     let form = document.querySelector('form');
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', () => {
       e.preventDefault();
       let output = document.querySelector('output');
       let firstNum = document.querySelector('#first-num').value;
@@ -102,6 +102,88 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    errorBtns[0].addEventListener('click', () => {
+      console.log('Console Log Demo');
+    })
+
+    errorBtns[1].addEventListener('click', () => {
+      console.error('Console Error Demo');
+    })
+
+    errorBtns[2].addEventListener('click', () => {
+      console.count("Count Button");
+    })
+
+    errorBtns[3].addEventListener('click', () => {
+      console.warn('Console Warn Demo');
+    })
+
+    errorBtns[4].addEventListener('click', () => {
+      const condition = false;
+      console.assert(condition, 'Assertation is not true!');
+    })
+
+    errorBtns[5].addEventListener('click', () => {
+      console.clear();
+    })
+
+    errorBtns[6].addEventListener('click', () => {
+      console.dir(errorBtns[6]);
+    })
+
+    errorBtns[7].addEventListener('click', () => {
+      console.dirxml(errorBtns[7]);
+    })
+
+    errorBtns[8].addEventListener('click', () => {
+      console.group();
+    })
+
+    errorBtns[9].addEventListener('click', () => {
+      console.groupEnd();
+    })
+
+    errorBtns[10].addEventListener('click', () => {
+      const tableC = [
+        ['Software Engineering', '110'],
+        ['Digital Logic', '140'],
+        ['Algorithms', '101']
+      ];
+      console.table(tableC);
+    })
+
+    errorBtns[11].addEventListener('click', () => {
+      console.time('Timer Button');
+    })
+
+    errorBtns[12].addEventListener('click', () => {
+      console.timeEnd('Timer Button');
+    })
+
+    errorBtns[13].addEventListener('click', () => {
+      deep();
+  });
+
+  function deep() {
+    deeper();
+  }
+
+  function deeper() {
+    deepest();
+  }
+
+  function deepest() {
+    console.trace();
+  }
+
+    errorBtns[14].addEventListener('click', () => {
+      triggerError();
+    })
+
+    function triggerError() {
+      undefinedFunction();
+    }
+
   </script>
 </body>
 
